@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style>
+    
+</style>
+</head>
+
+<body>
+
+    <div id="main">
+
+    </div> 
+
+    <script>
+
+        var output = document.getElementById("main");
+
+
+        var planetNames = ["Jupiter", "Venus", "Saturn", "Mars", "Sean's World"];
+        var distancesFromEarth = [5.2, 0.72, 9.5, 1.5, 20.5];
+        var sunnyInAugust = [false, true, false, true, true];
+
+
+        for(var i = 0; i < planetNames.length; i++)
+        {
+            output.innerHTML += "<span>" + planetNames[i] + "</span>" + "<br/>";
+            output.innerHTML += distancesFromEarth[i] + "<br/>";
+            output.innerHTML += sunnyInAugust[i] + "<br/>";
+            output.innerHTML += "----------" + "<br/>";
+        }
+        
+        
+        output.innerHTML += "<h4>These planets are sunny in August:</h4>";
+        
+        for(var i = 0; i < planetNames.length; i++)
+        {
+            if(sunnyInAugust[i] === true){
+                output.innerHTML += "<span>" + planetNames[i] + "</span>" + " / ";
+            }
+        }
+        
+        var special = document.getElementsByTagName("span");
+        
+        for(var i = 0; i < special.length; i++)
+        {
+            special[i].style.fontWeight = "bold";
+            special[i].style.color = "rgb(219, 128, 252)";
+        }
+        
+
+    </script>
+
+</body>
+</html>
